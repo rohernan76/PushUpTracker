@@ -1,0 +1,116 @@
+Training Date,Phase,Target Sets,Target Reps per Set,Total Target Push-ups,COMPLETED (Y/N),ACHIEVED THUS FAR,TOTAL GOAL,LEFT REMAINING,PHASE
+2025-03-11,Foundation,3,5,15,Y,,,,1
+2025-03-12,Foundation,3,5,15,Y,,,,1
+2025-03-14,Foundation,3,5,15,Y,,,,1
+2025-03-17,Foundation,3,5,15,Y,,,,1
+2025-03-18,Foundation,3,5,15,Y,,,,1
+2025-03-20,Foundation,3,5,15,Y,,,,1
+2025-03-23,Foundation,3,5,15,Y,,,,1
+2025-03-25,Foundation,3,5,15,Y,,,,1
+2025-03-26,Foundation,3,5,15,Y,,,,1
+2025-03-28,Foundation,3,5,15,Y,150,150,0,1
+2025-03-30,Foundation,4,8,32,Y,,,,2
+2025-04-01,Foundation,4,8,32,Y,,,,2
+2025-04-04,Foundation,4,8,32,Y,,,,2
+2025-04-05,Foundation,4,8,32,,,,,2
+2025-04-07,Foundation,4,8,32,,,,,2
+2025-04-09,Foundation,4,8,32,,,,,2
+2025-04-11,Foundation,4,8,32,,,,,2
+2025-04-13,Foundation,4,8,32,,,,,2
+2025-04-15,Foundation,4,8,32,,,,,2
+2025-04-17,Foundation,4,8,32,,96,320,-224,2
+2025-04-19,Foundation,5,10,50,,,,,3
+2025-04-21,Foundation,5,10,50,,,,,3
+2025-04-23,Foundation,5,10,50,,,,,3
+2025-04-25,Foundation,5,10,50,,,,,3
+2025-04-27,Foundation,5,10,50,,,,,3
+2025-04-29,Foundation,5,10,50,,,,,3
+2025-05-01,Foundation,5,10,50,,,,,3
+2025-05-03,Foundation,5,10,50,,,,,3
+2025-05-05,Foundation,5,10,50,,,,,3
+2025-05-07,Foundation,5,10,50,,0,500,-500,3
+2025-05-09,Foundation,6,15,90,,,,,4
+2025-05-11,Foundation,7,17,119,,,,,4
+2025-05-13,Foundation,8,19,152,,,,,4
+2025-05-15,Foundation,6,15,90,,,,,4
+2025-05-17,Foundation,7,17,119,,,,,4
+2025-05-19,Foundation,8,19,152,,,,,4
+2025-05-21,Foundation,6,15,90,,,,,4
+2025-05-23,Foundation,7,17,119,,0,931,-931,4
+2025-05-25,Volume Buildup,8,35,280,,,,,5
+2025-05-27,Volume Buildup,8,25,200,,,,,5
+2025-05-29,Volume Buildup,8,30,240,,,,,5
+2025-05-31,Volume Buildup,8,35,280,,,,,5
+2025-06-02,Volume Buildup,8,25,200,,,,,5
+2025-06-04,Volume Buildup,8,30,240,,,,,5
+2025-06-06,Volume Buildup,8,35,280,,,,,5
+2025-06-08,Volume Buildup,8,25,200,,,,,5
+2025-06-10,Volume Buildup,8,30,240,,,,,5
+2025-06-12,Volume Buildup,8,35,280,,,,,5
+2025-06-14,Volume Buildup,8,25,200,,,,,5
+2025-06-16,Volume Buildup,8,30,240,,,,,5
+2025-06-18,Volume Buildup,8,35,280,,,,,5
+2025-06-20,Volume Buildup,8,25,200,,,,,5
+2025-06-22,Volume Buildup,8,30,240,,,,,5
+2025-06-24,Volume Buildup,8,35,280,,,,,5
+2025-06-26,Volume Buildup,8,25,200,,,,,5
+2025-06-28,Volume Buildup,8,30,240,,,,,5
+2025-06-30,Volume Buildup,8,35,280,,,,,5
+2025-07-02,Volume Buildup,8,25,200,,,,,5
+2025-07-04,Volume Buildup,8,30,240,,,,,5
+2025-07-06,Volume Buildup,8,35,280,,,,,5
+2025-07-08,Volume Buildup,8,25,200,,,,,5
+2025-07-10,Volume Buildup,8,30,240,,,,,5
+2025-07-12,Volume Buildup,8,35,280,,,,,5
+2025-07-14,Volume Buildup,8,25,200,,,,,5
+2025-07-16,Volume Buildup,8,30,240,,,,,5
+2025-07-18,Volume Buildup,8,35,280,,,,,5
+2025-07-20,Volume Buildup,8,25,200,,,,,5
+2025-07-22,Volume Buildup,8,30,240,,,,,5
+2025-07-24,Volume Buildup,8,35,280,,,,,5
+2025-07-26,Volume Buildup,8,25,200,,,,,5
+2025-07-28,Volume Buildup,8,30,240,,,,,5
+2025-07-30,Volume Buildup,8,35,280,,,,,5
+2025-08-01,Volume Buildup,8,25,200,,,,,5
+2025-08-03,Volume Buildup,8,30,240,,,,,5
+2025-08-05,Volume Buildup,8,35,280,,0,8920,-8920,5
+2025-08-07,Endurance & High-Volume,8,50,400,,,,,6
+2025-08-09,Endurance & High-Volume,8,50,400,,,,,6
+2025-08-11,Endurance & High-Volume,7,50,350,,,,,6
+2025-08-13,Endurance & High-Volume,8,50,400,,,,,6
+2025-08-15,Endurance & High-Volume,8,50,400,,,,,6
+2025-08-17,Endurance & High-Volume,7,50,350,,,,,6
+2025-08-19,Endurance & High-Volume,8,50,400,,,,,6
+2025-08-21,Endurance & High-Volume,8,50,400,,,,,6
+2025-08-23,Endurance & High-Volume,7,50,350,,,,,6
+2025-08-25,Endurance & High-Volume,8,50,400,,,,,6
+2025-08-27,Endurance & High-Volume,8,50,400,,,,,6
+2025-08-29,Endurance & High-Volume,7,50,350,,,,,6
+2025-08-31,Endurance & High-Volume,8,50,400,,,,,6
+2025-09-02,Endurance & High-Volume,8,50,400,,,,,6
+2025-09-04,Endurance & High-Volume,7,50,350,,,,,6
+2025-09-06,Endurance & High-Volume,8,50,400,,,,,6
+2025-09-08,Endurance & High-Volume,8,50,400,,,,,6
+2025-09-10,Endurance & High-Volume,7,50,350,,,,,6
+2025-09-12,Endurance & High-Volume,8,50,400,,,,,6
+2025-09-14,Endurance & High-Volume,8,50,400,,,,,6
+2025-09-16,Endurance & High-Volume,7,50,350,,,,,6
+2025-09-18,Endurance & High-Volume,8,50,400,,,,,6
+2025-09-20,Endurance & High-Volume,8,50,400,,,,,6
+2025-09-22,Endurance & High-Volume,7,50,350,,,,,6
+2025-09-24,Endurance & High-Volume,8,50,400,,,,,6
+2025-09-26,Endurance & High-Volume,8,50,400,,,,,6
+2025-09-28,Endurance & High-Volume,7,50,350,,,,,6
+2025-09-30,Endurance & High-Volume,8,50,400,,,,,6
+2025-10-02,Endurance & High-Volume,8,50,400,,,,,6
+2025-10-04,Endurance & High-Volume,7,50,350,,,,,6
+2025-10-06,Endurance & High-Volume,8,50,400,,,,,6
+2025-10-08,Endurance & High-Volume,8,50,400,,,,,6
+2025-10-10,Endurance & High-Volume,7,50,350,,,,,6
+2025-10-12,Endurance & High-Volume,8,50,400,,,,,6
+2025-10-14,Endurance & High-Volume,8,50,400,,,,,6
+2025-10-16,Endurance & High-Volume,7,50,350,,0,13800,-13800,6
+,,,,,,,,,
+,,,,,SUBTOTAL,246,,,
+,,,,,AWAY FROM GOAL,24375,,,
+,,,,,TOTAL GOAL,,24621,,

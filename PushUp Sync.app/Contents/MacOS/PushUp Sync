@@ -1,0 +1,3 @@
+#!/bin/zsh
+cd ~/Library/CloudStorage/GoogleDrive-rohernan@gmail.com/My\ Drive/MY\ REAL\ DRIVE/Training\ \_\ Health\ \_\ SportsPerformance/pushup_training_plan/EXECUTE\ FROM\ HERE
+open -a Warp "./run_full_pushup_sync_warp_ready.command"

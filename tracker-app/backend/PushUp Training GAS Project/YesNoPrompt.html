@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <style>
+      .button-container {
+        text-align: center;
+        margin-top: 20px;
+      }
+      button {
+        margin: 0 10px;
+        padding: 5px 15px;
+      }
+      p {
+        white-space: pre-line; /* Preserve line breaks */
+      }
+    </style>
+  </head>
+  <body>
+    <p id="message"></p>
+    <div class="button-container">
+      <button onclick="submitResponse('Yes')">Yes</button>
+      <button onclick="submitResponse('No')">No</button>
+    </div>
+
+    <script>
+      function submitResponse(response) {
+        google.script.run.withSuccessHandler(google.script.host.close).handleYesNoResponse(response);
+      }
+    </script>
+  </body>
+</html>

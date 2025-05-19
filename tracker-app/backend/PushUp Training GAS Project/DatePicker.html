@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+  </head>
+  <body>
+    <label for="dateInput">Select the date you completed this training:</label><br>
+    <input type="date" id="dateInput" /><br><br>
+    <button onclick="submitDate()">Submit</button>
+    <button onclick="google.script.host.close()">Cancel</button>
+
+    <script>
+      function submitDate() {
+        var date = document.getElementById("dateInput").value;
+        google.script.run.withSuccessHandler(google.script.host.close).processDate(date);
+      }
+    </script>
+  </body>
+</html>

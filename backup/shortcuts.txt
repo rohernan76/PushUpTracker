@@ -1,0 +1,26 @@
+
+# SHORTCUTS: Push-Up Tracker Automation
+
+Follow these steps EXACTLY whenever you need to update your calendar based on changes in your Google Sheet:
+
+1️⃣ Open Terminal and run:
+
+   chmod +x ~/Desktop/download_pushup_csv.command
+   chmod +x ~/Desktop/rebuild_pushup_ics.command
+
+(You only need to do this once.)
+
+2️⃣ Double-click `download_pushup_csv.command`
+   - This fetches the latest data from your Google Sheet and saves it as a CSV in your training folder.
+
+3️⃣ Double-click `rebuild_pushup_ics.command`
+   - This deletes any old .ics files
+   - Rebuilds a new .ics calendar using your Python script
+   - Opens the folder
+   - Prompts you to open the import page for Google Calendar
+
+4️⃣ Import the `.ics` file into your `Push-Up Training_2025` calendar.
+
+That’s it!
+
+💡 Tip: Keep both `.command` files on your Desktop for easy access.

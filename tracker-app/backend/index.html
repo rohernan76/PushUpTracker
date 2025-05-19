@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="apple-touch-icon" href="https://drive.google.com/uc?export=view&id=1D7q8SCs78RFlC6aR626-8HgcRCYpZmYO">
+    <base target="_top">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 20px;
+        max-width: 420px;
+        margin: auto;
+      }
+
+      button {
+        font-size: 16px;
+        padding: 10px 20px;
+        margin: 10px 5px 0 0;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+
+      button:hover {
+        transform: scale(1.05);
+      }
+
+      button:active {
+        transform: scale(0.95);
+      }
+
+      button.yes {
+        background-color: #28a745;
+        color: white;
+      }
+
+      button.no {
+        background-color: #dc3545;
+        color: white;
+      }
+
+      .bar {
+        background-color: #e0e0e0;
+        border-radius: 20px;
+        overflow: hidden;
+        height: 16px;
+        width: 100%;
+        margin: 4px 0;
+      }
+
+      .bar-inner {
+        height: 100%;
+        transition: width 0.4s ease-in-out;
+      }
+
+      .bar-inner.green {
+        background-color: #28a745;
+      }
+
+      .bar-inner.blue {
+        background-color: #007bff;
+      }
+    </style>
+  </head>
+  <body onload="loadTracker()">
+    <h2>Push-Up Tracker Web App</h2>
+    <div id="promptArea">Loading latest training data...</div>
+
+    <script>
+      function loadTracker() {
+        google.script.run.withSuccessHandler(showPrompt).getLatestTrainingData();
+      }
+
+      function showPrompt(data) {
+        if (data.status === "no_data") {
+          document.getElementById("promptArea").innerText = "No training data found.";
+          return;
+        }
+
+        const promptHTML = `
+          <p><strong>Today:</strong> ${data.date}</p>
+          <p><strong>Last Training:</strong> ${data.date}</p>
+          <p><strong>Sets:</strong> ${data.sets}, <strong>Reps:</strong> ${data.reps}, <strong>Total:</strong> ${data.total}</p>
+          <p><strong>Status:</strong> ${data.completed}</p>
+          <p><em>Did you complete this workout?</em></p>
+          <button class="yes" onclick="handleResponse(true, ${data.rowIndex}, '${data.date}', ${data.total})">Yes</button>
+          <button class="no" onclick="handleResponse(false, ${data.rowIndex}, '${data.date}', ${data.total})">No</button>
+        `;
+        document.getElementById("promptArea").innerHTML = promptHTML;
+      }
+
+      function handleResponse(completed, rowIndex, date, total) {
+        if (completed) {
+          const dateDone = prompt("On which date did you complete it? (MM-DD-YYYY)", date);
+          const pushups = prompt(`How many push-ups did you complete out of ${total}?`, total);
+          google.script.run.withSuccessHandler(showSummary).recordCompletion(rowIndex, pushups, dateDone, true);
+        } else {
+          google.script.run.recordCompletion(rowIndex, 0, date, false);
+          alert("Marked as not completed.");
+        }
+        document.getElementById("promptArea").innerHTML = ""; // clear UI
+      }
+
+      function showSummary(progress) {
+        const container = document.getElementById("promptArea");
+        container.innerHTML = `
+          <h3>✅ Workout Logged!</h3>
+          <div>
+            <strong>Phase Progress:</strong><br>
+            <div class="bar"><div class="bar-inner green" style="width:${progress.phaseProgress.percent}%;"></div></div>
+            <small>${progress.phaseProgress.completed} of ${progress.phaseProgress.goal} push-ups (${progress.phaseProgress.percent}%)</small>
+          </div>
+          <div style="margin-top:10px;">
+            <strong>Overall Progress:</strong><br>
+            <div class="bar"><div class="bar-inner blue" style="width:${progress.overallProgress.percent}%;"></div></div>
+            <small>${progress.overallProgress.completed} of ${progress.overallProgress.goal} push-ups (${progress.overallProgress.percent}%)</small>
+          </div>
+          <div style="margin-top:10px;">
+            <strong>🔥 Streak:</strong> ${progress.streakCount} consecutive training day(s)
+          </div>
+          <div style="margin-top:30px;">
+            <strong>📊 Last 7 Workouts</strong>
+            <canvas id="pushupChart" width="400" height="200"></canvas>
+          </div>
+        `;
+        google.script.run.withSuccessHandler(renderChart).getRecentPushupData();
+      }
+
+      function renderChart(data) {
+        const ctx = document.getElementById("pushupChart").getContext("2d");
+        new Chart(ctx, {
+          type: "bar",
+          data: {
+            labels: data.map(entry => entry.date),
+            datasets: [{
+              label: "Push-Ups",
+              data: data.map(entry => entry.total),
+              backgroundColor: "#007bff"
+            }]
+          },
+          options: {
+            responsive: true,
+            plugins: {
+              legend: { display: false }
+            },
+            scales: {
+              y: { beginAtZero: true, ticks: { precision: 0 } }
+            }
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,130 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 ProximaNova-Regular;}
+{\colortbl;\red255\green255\blue255;\red251\green2\blue7;}
+{\*\expandedcolortbl;;\cssrgb\c100000\c14913\c0;}
+\vieww29280\viewh17840\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs28 \cf0 \
+# \uc0\u55357 \u56517  Push-Up Training Automation Toolkit (Warp-Ready Edition \'97 Using `fresh_env`)\
+\
+This README walks you through your fully automated and Warp-compatible system for updating your push-up training calendar via Google Calendar.\
+\
+---\
+\
+## \uc0\u55357 \u56577  Overview: What the Toolkit Does\
+\
+1. Downloads your updated training plan from Google Sheets as a `.csv`\
+2. Archives old `.csv` and `.ics` files into a timestamped folder\
+3. Activates your Python virtual environment (`fresh_env`)\
+4. Rebuilds your `.ics` calendar file using your `pushup_training_plan.py` script\
+5. Opens the folder and prompts Google Calendar import\
+\
+Your working directory is:\
+\
+```\
+cd "/Users/robertohernandez_macpro2020/Library/CloudStorage/GoogleDrive-rohernan@gmail.com/My Drive/MY REAL DRIVE/Training _ Health _ SportsPerformance/pushup_training_plan"\
+```\
+\
+You've created a Desktop alias to this directory called:\
+\
+```\
+pushup_training_plan\
+```\
+\
+---\
+\
+## \uc0\u55357 \u56523  STEP-BY-STEP USAGE\
+\
+### 1\uc0\u65039 \u8419  First-Time Setup\
+\
+#### a. Create and activate the virtual environment:\
+\
+In Warp, run:\
+\
+```bash\
+cd ""/Users/robertohernandez_macpro2020/Library/CloudStorage/GoogleDrive-rohernan@gmail.com/My Drive/MY REAL DRIVE/Training _ Health _ SportsPerformance/pushup_training_plan"\
+python3 -m venv fresh_env\
+source fresh_env/bin/activate\
+pip install icalendar pandas\
+```\
+\
+##### \uc0\u55357 \u56481  
+\b \cf2 Or use your custom alias:\
+
+\b0 \cf0 \
+If you\'92ve added this to your `.zshrc`:\
+```zsh\
+alias 
+\b mkfreshvenv
+\b0 ='python3 -m venv fresh_env && source fresh_env/bin/activate && echo "\uc0\u9989  Virtual environment activated: fresh_env"'\
+```\
+Then you can simply run:\
+```bash\
+
+\b mkfreshvenv
+\b0 \
+```\
+\
+(Just don\'92t forget to run `source ~/.zshrc` after adding it.)\
+\
+---\
+\
+### 2\uc0\u65039 \u8419  When You Update the Google Sheet\
+\
+- Save changes to your training plan in the tab `PUSH_UPS_TRAINING`\
+- Make sure the sheet is still shared as \'93Anyone with the link \'96 Viewer\'94\
+\
+---\
+\
+### 3\uc0\u65039 \u8419  Run the Automation\
+\
+Just double-click:\
+\
+```\
+
+\b run_full_pushup_sync_warp_ready.command
+\b0 \
+```\
+\
+This will:\
+- Archive any previous `.csv` or `.ics` files into `_archived/` with a timestamp\
+- Activate your `fresh_env` virtual environment\
+- Download the updated CSV from your Google Sheet\
+- Rebuild your `.ics` calendar file for Google Calendar\
+- Show a macOS notification and open the folder\
+\
+---\
+\
+### 4\uc0\u65039 \u8419  Import to Google Calendar\
+\
+1. Open [Google Calendar](https://calendar.google.com)\
+2. Go to \uc0\u9881 \u65039  **Settings** > **Import & export**\
+3. Import the new `.ics` file into your `Push-Up Training_2025` calendar\
+\
+---\
+\
+## \uc0\u55357 \u56514  Folder Recap\
+\
+Your working folder contains:\
+\
+- `Push-up_Training_Plan_Updated_Every_Other_Day.csv` \uc0\u8592  fresh download\
+- `Push-up_Training_Plan_With_Tracking.ics` \uc0\u8592  rebuilt iCal file\
+- `fresh_env/` \uc0\u8592  your Python virtual environment\
+- `download_pushup_csv.command` \uc0\u8592  grabs updated Google Sheet data\
+- `rebuild_pushup_ics.command` \uc0\u8592  converts CSV to `.ics`\
+- `run_full_pushup_sync_warp_ready.command` \uc0\u8592  one-click master launcher\
+- `pushup_training_plan.py` \uc0\u8592  your calendar-generation logic\
+- `_archived/` \uc0\u8592  auto-stored older `.csv` and `.ics` files\
+\
+---\
+\
+## \uc0\u9989  You're Ready\
+\
+You're now running a complete, resilient automation system \'97 fully Warp- and calendar-integrated.\
+\
+Crush those reps, Se\'f1or \uc0\u55357 \u56490 \u55357 \u56613 \
+\
+\
+\
+tf1nsi\page onttbl \page 0 Arial; \page 0\page s24 }
