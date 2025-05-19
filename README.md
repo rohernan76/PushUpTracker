@@ -1,61 +1,61 @@
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-[![GitHub](https://img.shields.io/badge/GitHub-PushUpTracker-blue?logo=github)](https://github.com/rohernan76/PushUpTracker)
+# 💪 Push-Up Tracker Project
 
-📅 Push-Up Training Automation Toolkit (Warp-Ready Edition — Using fresh_env)
+This repository contains a complete push-up training toolkit, split into three purpose-driven components:
 
-🔁 Overview: What the Toolkit Does
-----------------------------------
-1. Downloads your updated training plan from Google Sheets as a `.csv`
-2. Archives old `.csv` and `.ics` files into a timestamped folder
-3. Activates your Python virtual environment (`fresh_env`)
-4. Rebuilds your `.ics` calendar file using your `pushup_training_plan.py` script
-5. Opens Google Calendar's export page and highlights the .ics file in Finder
+---
 
-📋 STEP-BY-STEP USAGE
+## 🛠 `sync-app/` — Push-Up Calendar Sync Automation
 
-1️⃣ First-Time Setup (Run Once)
-------------------------------
-cd ~/.../EXECUTE FROM HERE
-python3 -m venv ../fresh_env
-source ../fresh_env/bin/activate
-pip install icalendar pandas
+Automates syncing your push-up training dates with Google Calendar. This folder includes:
 
-2️⃣ Update the Google Sheet
-----------------------------
-- Update your PUSH_UPS_TRAINING tab
-- Make sure the sheet is shared with “Anyone with the link – Viewer”
+- `.command` files for use with Warp or macOS Terminal
+- Integration with your Google Sheet: `PUSH_PULL_UP_Training_Plan_Updated_Every_Day`
+- Uses `fresh_env/` Python virtual environment for calendar script dependencies
+- Regenerates `.ics` calendar files automatically
+- Can be launched directly from macOS using:
+  - `launch_pushup_sync_warp.command`
+  - `run_full_pushup_sync_warp_ready.command`
 
-3️⃣ Run the Automation
-----------------------
-Double-click `PushUp Sync.app` in your Dock, or run:
-./run_full_pushup_sync_warp_ready.command
+> 📌 Make sure `fresh_env/` remains in this folder or update all script references accordingly.
 
-✔ Archives previous .csv/.ics
-✔ Downloads new .csv via curl
-✔ Rebuilds .ics from your pushup_training_plan.py
-✔ Opens Google Calendar + highlights the .ics
+---
 
-🧭 Notes
---------
-- Your `.ics` appears in the same folder as the script
-- Your `.csv` is downloaded into the same folder and referenced locally
+## 📊 `tracker-app/` — Web-Based Push-Up Logging Tracker
 
+Interactive web app connected to a Google Apps Script backend. Features:
 
-🧹 How to Bulk Delete All Training Events
-----------------------------------------
+- Visual progress bars and weekly charts via Chart.js
+- Daily training completion logging
+- Streak counter and phase tracking
+- `backend/` contains the exported `.gs` and `.html` source code
+- `tracker-ui.html` is the UI portion hosted via GitHub Pages
 
-All calendar events created by this automation include the following line in their description:
+---
 
-*** DELETE ALL "[Push-Up Training]" EVENTS TO REMOVE ***
+## 🚀 `landing-page/` — Unified Entry Point
 
-To remove all training events from your Google Calendar:
+Provides a single access page that links to both:
 
-1. Open https://calendar.google.com
-2. Use the search bar at the top to search for:
-   [Push-Up Training]
-3. Press Enter — this will list all related events
-4. Click into any result, then:
-   - Select "Delete"
-   - Choose "All events in the series" if applicable
+- ✅ Calendar Sync tool (`sync-app/`)
+- ✅ Progress Tracker (`tracker-app/`)
 
-💡 You can also search for just DELETE ALL as a catch-all keyword to clean up old calendar data.
+Hosted via GitHub Pages at:  
+➡️ `https://rohernan76.github.io/PushUpTracker/landing-page/`
+
+---
+
+## 🧼 .gitignore Includes
+
+This repo ignores:
+- `.DS_Store` macOS files
+- `.venv/` Python environments
+- `backup/` and `_archived/` folders
+- Any local `.app` launchers
+
+---
+
+## 🧭 Author
+
+Created and maintained by [@rohernan76](https://github.com/rohernan76).  
+Part of a hybrid automation system for performance, habit tracking, and personal growth.
+
