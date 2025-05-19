@@ -1,4 +1,8 @@
 # 💪 Push-Up Tracker Project
+[![GitHub Pages](https://img.shields.io/badge/Launch-WebApp-blue?logo=github)](https://rohernan76.github.io/PushUpTracker/landing-page/)
+[![Last Commit](https://img.shields.io/github/last-commit/rohernan76/PushUpTracker)](https://github.com/rohernan76/PushUpTracker)
+[![Repo Size](https://img.shields.io/github/repo-size/rohernan76/PushUpTracker)](https://github.com/rohernan76/PushUpTracker)
+[![License](https://img.shields.io/github/license/rohernan76/PushUpTracker)](LICENSE)
 
 This repository contains a complete push-up training toolkit, split into three purpose-driven components:
 
