@@ -1,6 +1,12 @@
-../Assets/
-../_archived/
-../backup/
+# System files
 .DS_Store
-.DS_Store
-.DS_Store
+
+# Virtual environments
+.venv/
+
+# Backup folders
+backup/
+_archived/
+
+# macOS apps or temp files
+*.app
